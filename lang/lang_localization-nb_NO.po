@@ -1,0 +1,50 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-03-22 09:52+0100\n"
+"PO-Revision-Date: \n"
+"Last-Translator: Martin Fors\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-Language: nb_NO\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Poedit-KeywordsList: esc_html__;esc_html_e;esc_attr__;esc_attr_e;__;_e\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SearchPath-0: ..\n"
+
+msgid "API Key"
+msgstr "API-Nøkkel"
+
+msgid "Are you sure?"
+msgstr "Er du sikker?"
+
+msgid "Something went wrong (%s)"
+msgstr "Noe gikk galt (%s)"
+
+msgid "new"
+msgstr "ny"
+
+msgid "translated"
+msgstr "Oversatt"
+
+msgid "Update"
+msgstr "Oppdatere"
+
+msgid "Change"
+msgstr "Endre"
+
+msgid "Add"
+msgstr "Legg til"
+
+msgid "English"
+msgstr "Engelsk"
+
+msgid "Translated"
+msgstr "Oversatt"
+
+msgid "Download"
+msgstr "Last ned"
+
