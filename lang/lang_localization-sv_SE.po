@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-04-16 07:11+0100\n"
+"POT-Creation-Date: 2019-06-07 15:21+0100\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Martin Fors\n"
 "Language-Team: \n"
@@ -53,6 +53,12 @@ msgstr "Översättningen uppdaterades"
 
 msgid "I could not update the translation for you"
 msgstr "Jag kunde inte uppdatera översättningen åt dig"
+
+msgid "The translation was deleted"
+msgstr "Översättningen raderades"
+
+msgid "I could not delete the translation for you"
+msgstr "Jag kunde inte radera översättningen åt dig"
 
 msgid "I could not update the translation for you because the request lacked information"
 msgstr "Jag kunde inte uppdatera översättningen åt dig eftersom anropet saknade information"
