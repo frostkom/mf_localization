@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-06-07 15:21+0100\n"
+"POT-Creation-Date: 2019-08-03 21:38+0100\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Martin Fors\n"
 "Language-Team: \n"
@@ -15,11 +15,44 @@ msgstr ""
 "X-Poedit-Basepath: .\n"
 "X-Poedit-SearchPath-0: ..\n"
 
-msgid "API Key"
-msgstr "API-nyckel"
-
 msgid "Localization"
 msgstr "Lokalisering"
+
+msgid "Toggle Tables"
+msgstr "Växla tabeller"
+
+msgid "Toggle Translated"
+msgstr "Växla översatta"
+
+msgid "Toggle Empty"
+msgstr "Växla tomma"
+
+msgid "Verify"
+msgstr "Verifiera"
+
+msgid "Change"
+msgstr "Ändra"
+
+msgid "Add"
+msgstr "Lägg till"
+
+msgid "none"
+msgstr "ingen"
+
+msgid "%d left"
+msgstr "%d kvar"
+
+msgid "English"
+msgstr "Engelska"
+
+msgid "Translated"
+msgstr "Översatt"
+
+msgid "Download"
+msgstr "Ladda ner"
+
+msgid "API Key"
+msgstr "API-nyckel"
 
 msgid "Get yours here"
 msgstr "Hämta din här"
@@ -55,44 +88,11 @@ msgid "I could not update the translation for you"
 msgstr "Jag kunde inte uppdatera översättningen åt dig"
 
 msgid "The translation was deleted"
-msgstr "Översättningen raderades"
+msgstr "Översättningen togs bort"
 
 msgid "I could not delete the translation for you"
 msgstr "Jag kunde inte radera översättningen åt dig"
 
 msgid "I could not update the translation for you because the request lacked information"
 msgstr "Jag kunde inte uppdatera översättningen åt dig eftersom anropet saknade information"
-
-msgid "Toggle Tables"
-msgstr "Växla tabeller"
-
-msgid "Toggle Translated"
-msgstr "Växla översatta"
-
-msgid "Toggle Empty"
-msgstr "Växla tomma"
-
-msgid "Verify"
-msgstr "Verifiera"
-
-msgid "Change"
-msgstr "Ändra"
-
-msgid "Add"
-msgstr "Lägg till"
-
-msgid "none"
-msgstr "ingen"
-
-msgid "%d left"
-msgstr "%d kvar"
-
-msgid "English"
-msgstr "Engelska"
-
-msgid "Translated"
-msgstr "Översatt"
-
-msgid "Download"
-msgstr "Ladda ner"
 
