@@ -207,7 +207,7 @@ echo "<div class='wrap'>
 		<table class='wp-list-table widefat striped'>
 			<thead>
 				<tr>
-					<th></th>
+					<th class='column-primary'></th>
 					<th>".__("English", 'lang_localization')."</th>
 					<th>".__("Translated", 'lang_localization')."</th>
 				</tr>
