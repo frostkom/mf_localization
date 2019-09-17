@@ -48,7 +48,7 @@ echo "<div class='wrap'>
 			$translated_out = $row_actions = "";
 			$intLocalizationID = 0;
 
-			$result = $wpdb->get_results($wpdb->prepare("SELECT localizationID, localizationString, localizationTranslated, localizationVerified, localizationCreated, userID FROM ".$wpdb->prefix."localization WHERE localizationString = %s AND (localizationPlugin = %s OR localizationPlugin IS NULL)", $original_text, $obj_localization->plugin));
+			$result = $wpdb->get_results($wpdb->prepare("SELECT localizationID, localizationString, localizationTranslated, localizationVerified, localizationCreated, userID FROM ".$wpdb->prefix."localization WHERE localizationString = %s AND (localizationPlugin = %s OR localizationPlugin IS NULL)", $original_text, $obj_localization->plugin)); // AND localizationTranslated != localizationString
 
 			if($wpdb->num_rows > 0)
 			{
@@ -63,7 +63,7 @@ echo "<div class='wrap'>
 					$dteLocalizationCreated = $r->localizationCreated;
 					$intUserID = $r->userID;
 
-					if($i > 0 || ($is_translated && $strLocalizationTranslated == $translated_text))
+					if($i > 0 || ($is_translated && $strLocalizationTranslated == $translated_text) || $strLocalizationTranslated == $strLocalizationString || $strLocalizationTranslated == '')
 					{
 						$wpdb->query($wpdb->prepare("DELETE FROM ".$wpdb->prefix."localization WHERE localizationID = '%d'", $intLocalizationID));
 					}
@@ -91,7 +91,7 @@ echo "<div class='wrap'>
 							$obj_localization->api_used++;
 						}
 
-						if($strLocalizationTranslated != '')
+						if($strLocalizationTranslated != '') // && $strLocalizationTranslated != $strLocalizationString
 						{
 							$translated_out .= $strLocalizationTranslated;
 
@@ -130,7 +130,7 @@ echo "<div class='wrap'>
 
 			else
 			{
-				$result = $wpdb->get_results($wpdb->prepare("SELECT localizationTranslated FROM ".$wpdb->prefix."localization WHERE localizationString = %s AND localizationPlugin != %s LIMIT 0, 1", $original_text, $obj_localization->plugin));
+				$result = $wpdb->get_results($wpdb->prepare("SELECT localizationTranslated FROM ".$wpdb->prefix."localization WHERE localizationString = %s AND localizationPlugin != %s AND localizationTranslated != '' LIMIT 0, 1", $original_text, $obj_localization->plugin));
 
 				if($wpdb->num_rows > 0)
 				{
@@ -138,13 +138,16 @@ echo "<div class='wrap'>
 					{
 						$strLocalizationTranslated = $r->localizationTranslated;
 
-						$wpdb->query($wpdb->prepare("INSERT INTO ".$wpdb->prefix."localization SET localizationString = %s, localizationTranslated = %s, localizationPlugin = %s, localizationCreated = NOW(), userID = '%d'", $original_text, $strLocalizationTranslated, $obj_localization->plugin, get_current_user_id()));
+						if($strLocalizationTranslated != $original_text)
+						{
+							$wpdb->query($wpdb->prepare("INSERT INTO ".$wpdb->prefix."localization SET localizationString = %s, localizationTranslated = %s, localizationPlugin = %s, localizationCreated = NOW(), userID = '%d'", $original_text, $strLocalizationTranslated, $obj_localization->plugin, get_current_user_id()));
 
-						$intLocalizationID = $wpdb->insert_id;
+							$intLocalizationID = $wpdb->insert_id;
 
-						$translated_out .= $strLocalizationTranslated;
+							$translated_out .= $strLocalizationTranslated;
 
-						$row_actions .= ($row_actions != '' ? " | " : '')."<a href='#change/".$intLocalizationID."' class='ajax_link'>".__("Change", 'lang_localization')."</a>";
+							$row_actions .= ($row_actions != '' ? " | " : '')."<a href='#change/".$intLocalizationID."' class='ajax_link'>".__("Change", 'lang_localization')."</a>";
+						}
 					}
 				}
 

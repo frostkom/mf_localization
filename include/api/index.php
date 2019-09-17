@@ -79,7 +79,37 @@ if(get_current_user_id() > 0)
 
 			if($intLocalizationID > 0)
 			{
-				if($strLocalizationTranslated != '')
+				$strLocalizationString = $wpdb->get_var($wpdb->prepare("SELECT localizationString FROM ".$wpdb->prefix."localization WHERE localizationID = '%d'", $intLocalizationID));
+
+				if($strLocalizationTranslated == $strLocalizationString || $strLocalizationTranslated == '')
+				{
+					$wpdb->query($wpdb->prepare("DELETE FROM ".$wpdb->prefix."localization WHERE localizationID = '%d'", $intLocalizationID));
+
+					if($wpdb->rows_affected > 0)
+					{
+						$json_output['success'] = true;
+
+						if($strLocalizationTranslated == $strLocalizationString)
+						{
+							$done_text = __("A translation is only necessary if it differs from the original, so it was not saved", 'lang_localization');
+						}
+
+						else
+						{
+							$done_text = __("The translation was deleted", 'lang_localization');
+						}
+
+						$json_output['message'] = get_notification();
+					}
+
+					else
+					{
+						$error_text = __("I could not delete the translation for you", 'lang_localization');
+						$json_output['error'] = get_notification();
+					}
+				}
+
+				else
 				{
 					$wpdb->query($wpdb->prepare("UPDATE ".$wpdb->prefix."localization SET localizationTranslated = %s, localizationVerified = '1', localizationCreated = NOW(), userID = '%d' WHERE localizationID = '%d'", $strLocalizationTranslated, get_current_user_id(), $intLocalizationID));
 
@@ -93,24 +123,6 @@ if(get_current_user_id() > 0)
 					else
 					{
 						$error_text = __("I could not update the translation for you", 'lang_localization');
-						$json_output['error'] = get_notification();
-					}
-				}
-
-				else
-				{
-					$wpdb->query($wpdb->prepare("DELETE FROM ".$wpdb->prefix."localization WHERE localizationID = '%d'", $intLocalizationID));
-
-					if($wpdb->rows_affected > 0)
-					{
-						$json_output['success'] = true;
-						$done_text = __("The translation was deleted", 'lang_localization');
-						$json_output['message'] = get_notification();
-					}
-
-					else
-					{
-						$error_text = __("I could not delete the translation for you", 'lang_localization');
 						$json_output['error'] = get_notification();
 					}
 				}
