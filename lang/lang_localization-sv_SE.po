@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-08-03 21:38+0100\n"
+"POT-Creation-Date: 2019-10-14 08:56+0100\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Martin Fors\n"
 "Language-Team: \n"
@@ -15,8 +15,56 @@ msgstr ""
 "X-Poedit-Basepath: .\n"
 "X-Poedit-SearchPath-0: ..\n"
 
+msgid "API Key"
+msgstr "API-nyckel"
+
 msgid "Localization"
 msgstr "Lokalisering"
+
+msgid "Get yours here"
+msgstr "Hämta din här"
+
+msgid "Are you sure?"
+msgstr "Är du säker?"
+
+msgid "Files to Download"
+msgstr "Filer att ladda ner"
+
+msgid "I got no answer from the translation API"
+msgstr "Jag fick inget svar från översättnings-APIet"
+
+msgid "new"
+msgstr "ny"
+
+msgid "translated"
+msgstr "översatt"
+
+msgid "The translation was verified"
+msgstr "Översättningen verifierades"
+
+msgid "I could not verify the translation for you"
+msgstr "Jag kunde inte verifiera översättningen åt dig"
+
+msgid "Update"
+msgstr "Uppdatera"
+
+msgid "A translation is only necessary if it differs from the original, so it was not saved"
+msgstr "En översättning är endast nödvändig om den skiljer sig från originalet, så detta sparades inte"
+
+msgid "The translation was deleted"
+msgstr "Översättningen togs bort"
+
+msgid "I could not delete the translation for you"
+msgstr "Jag kunde inte radera översättningen åt dig"
+
+msgid "The translation was updated"
+msgstr "Översättningen uppdaterades"
+
+msgid "I could not update the translation for you"
+msgstr "Jag kunde inte uppdatera översättningen åt dig"
+
+msgid "I could not update the translation for you because the request lacked information"
+msgstr "Jag kunde inte uppdatera översättningen åt dig eftersom anropet saknade information"
 
 msgid "Toggle Tables"
 msgstr "Växla tabeller"
@@ -50,49 +98,4 @@ msgstr "Översatt"
 
 msgid "Download"
 msgstr "Ladda ner"
-
-msgid "API Key"
-msgstr "API-nyckel"
-
-msgid "Get yours here"
-msgstr "Hämta din här"
-
-msgid "Are you sure?"
-msgstr "Är du säker?"
-
-msgid "Files to Download"
-msgstr "Filer att ladda ner"
-
-msgid "I got no answer from the translation API"
-msgstr "Jag fick inget svar från översättnings-APIet"
-
-msgid "new"
-msgstr "ny"
-
-msgid "translated"
-msgstr "översatt"
-
-msgid "The translation was verified"
-msgstr "Översättningen verifierades"
-
-msgid "I could not verify the translation for you"
-msgstr "Jag kunde inte verifiera översättningen åt dig"
-
-msgid "Update"
-msgstr "Uppdatera"
-
-msgid "The translation was updated"
-msgstr "Översättningen uppdaterades"
-
-msgid "I could not update the translation for you"
-msgstr "Jag kunde inte uppdatera översättningen åt dig"
-
-msgid "The translation was deleted"
-msgstr "Översättningen togs bort"
-
-msgid "I could not delete the translation for you"
-msgstr "Jag kunde inte radera översättningen åt dig"
-
-msgid "I could not update the translation for you because the request lacked information"
-msgstr "Jag kunde inte uppdatera översättningen åt dig eftersom anropet saknade information"
 
