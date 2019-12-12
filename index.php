@@ -3,7 +3,7 @@
 Plugin Name: MF Localization
 Plugin URI: 
 Description: 
-Version: 2.0.13
+Version: 2.0.14
 Licence: GPLv2 or later
 Author: Martin Fors
 Author URI: https://frostkom.se

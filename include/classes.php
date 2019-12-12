@@ -345,7 +345,7 @@ class mf_localization
 			{
 				$translated_percent = mf_format_number((($this->translated / $this->total) * 100), 0);
 
-				$translated_button_class = 'disabled';
+				$translated_button_class = 'is_disabled';
 				$translated_span_class = '';
 
 				if($translated_percent == 100)
