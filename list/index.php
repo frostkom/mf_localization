@@ -1,8 +1,6 @@
 <?php
 
 $obj_localization = new mf_localization();
-//$obj_localization->fetch_request();
-//echo $obj_localization->save_data();
 
 echo "<div class='wrap'>
 	<h2>"

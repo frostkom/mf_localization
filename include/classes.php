@@ -166,22 +166,22 @@ class mf_localization
 								$name_temp = $arr_plugin_data['Name'];
 							}
 
-							/*else
+							else
 							{
 								do_log("No name was returned when trying for ".$plugin_dir);
-							}*/
+							}
 						}
 
-						/*else
+						else
 						{
 							do_log("File does not exist: ".$plugin_dir);
-						}*/
+						}
 					}
 
-					/*else
+					else
 					{
-						do_log("mf_ does not exist in ".$plugin_dir." -> ".$plugin_dir_clean." -> ".var_export($arr_dir, true));
-					}*/
+						do_log("mf_ does not exist in ".$data['file']." -> ".$plugin_dir." -> ".$plugin_dir_clean." -> ".var_export($arr_dir, true));
+					}
 				}
 
 				if($name_temp == '' && preg_match("/\/themes\//", $data['file']))
