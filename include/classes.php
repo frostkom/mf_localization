@@ -109,10 +109,7 @@ class mf_localization
 
 			$count_message = $this->get_count_message();
 
-			$menu_title = __("Localization", 'lang_localization');
-			//add_menu_page($menu_title, $menu_title.$count_message, $menu_capability, $menu_start, '', 'dashicons-admin-site', 100);
-
-			if($count_message != '')
+			if($count_message != '' && current_user_can($menu_capability))
 			{
 				global $menu;
 
@@ -122,6 +119,7 @@ class mf_localization
 				}
 			}
 
+			$menu_title = __("Localization", 'lang_localization');
 			add_submenu_page("tools.php", $menu_title, $menu_title.$count_message, $menu_capability, $menu_start);
 		}
 	}
