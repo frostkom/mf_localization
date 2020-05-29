@@ -101,7 +101,9 @@ class mf_localization
 
 	function admin_menu()
 	{
-		if($this->is_english() == false)
+		global $wpdb;
+
+		if($this->is_english() == false && does_table_exist($wpdb->prefix."localization"))
 		{
 			$menu_root = $this->plugin_dir."/";
 			$menu_start = $menu_root.'list/index.php';
