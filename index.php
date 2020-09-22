@@ -3,7 +3,7 @@
 Plugin Name: MF Localization
 Plugin URI: 
 Description: 
-Version: 2.1.2
+Version: 2.1.3
 Licence: GPLv2 or later
 Author: Martin Fors
 Author URI: https://frostkom.se
@@ -30,7 +30,7 @@ if(is_admin())
 	add_action('admin_menu', array($obj_localization, 'admin_menu'));
 }
 
-load_plugin_textdomain('lang_localization', false, dirname(plugin_basename(__FILE__)).'/lang/');
+load_plugin_textdomain('lang_localization', false, dirname(plugin_basename(__FILE__))."/lang/");
 
 function activate_localization()
 {
