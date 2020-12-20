@@ -18,7 +18,7 @@ $type_action = $arr_input[0];
 $type_value_1 = isset($arr_input[1]) ? $arr_input[1] : "";
 $type_value_2 = isset($arr_input[2]) ? $arr_input[2] : "";
 
-if(get_current_user_id() > 0)
+if(is_user_logged_in())
 {
 	switch($type_action)
 	{
