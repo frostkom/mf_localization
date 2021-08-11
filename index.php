@@ -3,7 +3,7 @@
 Plugin Name: MF Localization
 Plugin URI: 
 Description: 
-Version: 2.1.5
+Version: 2.1.6
 Licence: GPLv2 or later
 Author: Martin Fors
 Author URI: https://frostkom.se
@@ -13,7 +13,7 @@ Domain Path: /lang
 Depends: MF Base
 */
 
-if(is_plugin_active("mf_base/index.php"))
+if(function_exists('is_plugin_active') && is_plugin_active("mf_base/index.php"))
 {
 	include_once("include/classes.php");
 
@@ -38,7 +38,7 @@ if(is_plugin_active("mf_base/index.php"))
 	{
 		global $wpdb;
 
-		$default_charset = DB_CHARSET != '' ? DB_CHARSET : "utf8";
+		$default_charset = (DB_CHARSET != '' ? DB_CHARSET : 'utf8');
 
 		$arr_add_column = $arr_update_column = $arr_add_index = array();
 
