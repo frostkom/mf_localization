@@ -1,8 +1,8 @@
 <?php
 /*
 Plugin Name: MF Localization
-Plugin URI: 
-Description: 
+Plugin URI:
+Description:
 Version: 2.1.7
 Licence: GPLv2 or later
 Author: Martin Fors

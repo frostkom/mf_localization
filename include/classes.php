@@ -70,7 +70,7 @@ class mf_localization
 	{
 		global $pagenow;
 
-		if($pagenow == 'tools.php' && check_var('page') == 'mf_localization/list/index.php') //$pagenow == 'admin.php' && 
+		if($pagenow == 'tools.php' && check_var('page') == 'mf_localization/list/index.php')
 		{
 			$plugin_include_url = plugin_dir_url(__FILE__);
 			$plugin_version = get_plugin_version(__FILE__);
