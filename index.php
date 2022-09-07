@@ -3,7 +3,7 @@
 Plugin Name: MF Localization
 Plugin URI:
 Description:
-Version: 2.1.7
+Version: 2.1.8
 Licence: GPLv2 or later
 Author: Martin Fors
 Author URI: https://frostkom.se
@@ -54,11 +54,8 @@ if(!function_exists('is_plugin_active') || function_exists('is_plugin_active') &
 		) DEFAULT CHARSET=".$default_charset);
 
 		$arr_add_column[$wpdb->prefix."localization"] = array(
-			'localizationPlugin' => "ALTER TABLE [table] ADD [column] VARCHAR(60) DEFAULT NULL AFTER localizationTranslated",
-		);
-
-		$arr_add_column[$wpdb->prefix."localization"] = array(
-			'localizationCreated' => "ALTER TABLE [table] ADD [column] DATETIME DEFAULT NULL AFTER localizationVerified",
+			//'localizationPlugin' => "ALTER TABLE [table] ADD [column] VARCHAR(60) DEFAULT NULL AFTER localizationTranslated",
+			//'localizationCreated' => "ALTER TABLE [table] ADD [column] DATETIME DEFAULT NULL AFTER localizationVerified",
 		);
 
 		$arr_update_column[$wpdb->prefix."localization"] = array(
