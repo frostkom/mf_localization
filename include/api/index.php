@@ -15,8 +15,8 @@ $type = check_var('type', 'char');
 $arr_input = explode("/", $type);
 
 $type_action = $arr_input[0];
-$type_value_1 = isset($arr_input[1]) ? $arr_input[1] : "";
-$type_value_2 = isset($arr_input[2]) ? $arr_input[2] : "";
+$type_value_1 = (isset($arr_input[1]) ? $arr_input[1] : '');
+$type_value_2 = (isset($arr_input[2]) ? $arr_input[2] : '');
 
 if(is_user_logged_in())
 {
