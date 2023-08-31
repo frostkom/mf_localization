@@ -2,6 +2,18 @@
 
 class mf_localization
 {
+	var $id = 0;
+	var $plugin_dir = "mf_localization";
+
+	// https://tech.yandex.com/translate/doc/dg/concepts/api-overview-docpage/
+	var $arr_languages = array(
+		'da-DK' => 'da',
+		'nb-NO' => 'no',
+		'sv-SE' => 'sv',
+	);
+
+	var $blog_language = "";
+
 	function __construct($id = 0)
 	{
 		if($id > 0)
@@ -14,14 +26,14 @@ class mf_localization
 			$this->id = check_var('intLocalizationID');
 		}
 
-		$this->plugin_dir = "mf_localization";
+		//$this->plugin_dir = "mf_localization";
 
 		// https://tech.yandex.com/translate/doc/dg/concepts/api-overview-docpage/
-		$this->arr_languages = array(
+		/*$this->arr_languages = array(
 			'da-DK' => 'da',
 			'nb-NO' => 'no',
 			'sv-SE' => 'sv',
-		);
+		);*/
 
 		$this->blog_language = get_bloginfo('language');
 	}
