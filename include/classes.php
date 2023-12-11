@@ -96,7 +96,7 @@ class mf_localization
 	{
 		$out = "";
 
-		if(IS_ADMIN)
+		if(IS_ADMINISTRATOR)
 		{
 			$option_localization_updated_files = get_option('option_localization_updated_files');
 
