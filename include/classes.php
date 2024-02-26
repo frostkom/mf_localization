@@ -3,7 +3,7 @@
 class mf_localization
 {
 	var $id;
-	var $plugin_dir = "mf_localization";
+	var $post_type = "mf_localization";
 	var $arr_languages = array( // https://tech.yandex.com/translate/doc/dg/concepts/api-overview-docpage/
 		'da-DK' => 'da',
 		'nb-NO' => 'no',
@@ -41,6 +41,25 @@ class mf_localization
 	function is_english()
 	{
 		return substr(get_bloginfo('language'), 0, 3) == 'en-';
+	}
+
+	function cron_base()
+	{
+		$obj_cron = new mf_cron();
+		$obj_cron->start(__CLASS__);
+
+		if($obj_cron->is_running == false)
+		{
+			// Delete old uploads
+			#######################
+			list($upload_path, $upload_url) = get_uploads_folder($this->post_type);
+
+			get_file_info(array('path' => $upload_path, 'callback' => 'delete_files_callback', 'time_limit' => WEEK_IN_SECONDS));
+			get_file_info(array('path' => $upload_path, 'folder_callback' => 'delete_empty_folder_callback'));
+			#######################
+		}
+
+		$obj_cron->end();
 	}
 
 	/* Admin */
@@ -117,7 +136,7 @@ class mf_localization
 
 		if($this->is_english() == false && does_table_exist($wpdb->prefix."localization"))
 		{
-			$menu_root = $this->plugin_dir."/";
+			$menu_root = $this->post_type."/";
 			$menu_start = $menu_root.'list/index.php';
 			$menu_capability = override_capability(array('page' => $menu_start, 'default' => 'edit_posts'));
 
@@ -324,7 +343,7 @@ class mf_localization
 
 		if($this->verified > 0 && count($this->arr_texts) > 0)
 		{
-			list($upload_path, $upload_url) = get_uploads_folder($this->plugin_dir);
+			list($upload_path, $upload_url) = get_uploads_folder($this->post_type);
 
 			$file = ($this->current_type == 'plugin' ? $this->current_plugin."-" : '').str_replace("-", "_", $this->blog_language).".po";
 

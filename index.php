@@ -20,6 +20,7 @@ if(!function_exists('is_plugin_active') || function_exists('is_plugin_active') &
 	$obj_localization = new mf_localization();
 
 	add_action('cron_base', 'activate_localization', mt_rand(1, 10));
+	add_action('cron_base', array($obj_localization, 'cron_base'), mt_rand(1, 10));
 
 	if(is_admin())
 	{
@@ -80,8 +81,12 @@ if(!function_exists('is_plugin_active') || function_exists('is_plugin_active') &
 
 	function uninstall_localization()
 	{
+		include_once("include/classes.php");
+
+		$obj_localization = new mf_localization();
+
 		mf_uninstall_plugin(array(
-			'uploads' => 'mf_localization',
+			'uploads' => $obj_localization->post_type,
 			'options' => array('setting_localization_api_key', 'option_localization_updated_files'),
 			'tables' => array('localization'),
 		));
