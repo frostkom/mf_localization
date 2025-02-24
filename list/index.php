@@ -219,7 +219,7 @@ echo "<div class='wrap'>
 		$out_files .= $obj_localization->generate_files();
 	}
 
-	update_option('option_localization_updated_files', $obj_localization->generated_files, 'no');
+	update_option('option_localization_updated_files', $obj_localization->generated_files, false);
 
 	if($out != '')
 	{
