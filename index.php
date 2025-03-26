@@ -3,7 +3,7 @@
 Plugin Name: MF Localization
 Plugin URI:
 Description:
-Version: 2.1.15
+Version: 2.1.16
 Licence: GPLv2 or later
 Author: Martin Fors
 Author URI: https://martinfors.se
