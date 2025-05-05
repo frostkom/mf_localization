@@ -140,7 +140,7 @@ class mf_localization
 		{
 			$menu_root = $this->post_type."/";
 			$menu_start = $menu_root.'list/index.php';
-			$menu_capability = override_capability(array('page' => $menu_start, 'default' => 'edit_posts'));
+			$menu_capability = 'edit_posts';
 
 			$count_message = $this->get_count_message();
 
