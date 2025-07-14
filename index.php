@@ -3,7 +3,7 @@
 Plugin Name: MF Localization
 Plugin URI:
 Description:
-Version: 2.1.18
+Version: 2.1.19
 Licence: GPLv2 or later
 Author: Martin Fors
 Author URI: https://martinfors.se
@@ -41,7 +41,7 @@ if(!function_exists('is_plugin_active') || function_exists('is_plugin_active') &
 
 		$default_charset = (DB_CHARSET != '' ? DB_CHARSET : 'utf8');
 
-		$arr_add_column = $arr_update_column = $arr_add_index = array();
+		$arr_add_column = $arr_update_column = $arr_add_index = [];
 
 		$wpdb->query("CREATE TABLE IF NOT EXISTS ".$wpdb->prefix."localization (
 			localizationID INT UNSIGNED NOT NULL AUTO_INCREMENT,

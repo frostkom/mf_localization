@@ -9,7 +9,7 @@ if(!defined('ABSPATH'))
 	require_once($folder."wp-load.php");
 }
 
-$json_output = array();
+$json_output = [];
 
 $type = check_var('type', 'char');
 $arr_input = explode("/", $type);

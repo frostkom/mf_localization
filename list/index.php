@@ -30,7 +30,7 @@ echo "<div class='wrap'>
 		$obj_localization->current_type = $array['type'];
 
 		$obj_localization->total = $obj_localization->translated = $obj_localization->verified = 0;
-		$obj_localization->arr_texts = array();
+		$obj_localization->arr_texts = [];
 
 		$out_body = "";
 

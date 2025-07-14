@@ -113,7 +113,7 @@ class mf_localization
 		}
 	}
 
-	function get_count_message($data = array())
+	function get_count_message($data = [])
 	{
 		$out = "";
 
@@ -162,7 +162,7 @@ class mf_localization
 	/* Get localizations from PHP code */
 	function init_po_strings()
 	{
-		$this->arr_po_strings = array();
+		$this->arr_po_strings = [];
 	}
 
 	function get_po_strings($data)
